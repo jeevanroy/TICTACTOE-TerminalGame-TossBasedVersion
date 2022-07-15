@@ -171,7 +171,8 @@ def game_logic():
                 print('.'*k)
                 break
             marker = marker_fliper(marker)
-            player = player_fliper(player)
+            if len(indices_list)!=0:
+                player = player_fliper(player)
             if len(indices_list)==0:
                 break
 
