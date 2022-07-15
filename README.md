@@ -16,14 +16,14 @@ GAME LOGIC:
 If you enter n you will come out of the game. You will come to the actual terminal.
 If you enter y the game will ask for the player names.
 After entering your names a random toss will be done.
-Winner will be displayed on the screen.
+Winner will be displayed on the screen. With a little cheer-up to the one who was defeated.
 He can choose either X or O.
 He will be asked to provide a position to put his X or O on the board.
 now 1st iteration is DONE.
 Then the other guy will be asked to provide a position to put his O or X on the board.
 now 2nd iteration is DONE.
 Like this it goes upto 9th interation if nobody won.
-If somebody won at any number of iteration then greetings will be displayed on the output.
+If somebody won at any number of iteration then greetings will be displayed on the output. With a little cheerup to the one who was defeated.
 
 The game continues only if you provide the expected input.
   
