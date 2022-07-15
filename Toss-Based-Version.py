@@ -90,12 +90,16 @@ def game_logic():
         import random
         def toss_for_X_or_O():
             global toss_winner
+            global toss_loser
             if random.randint(0,1)==0:
-                toss_winner = player1
+                toss_winner,toss_loser = player1,player2
             else:
-                toss_winner = player2
+                toss_winner,toss_loser = player2,player1
             print(' '*k)
-            print('* {} won the toss! *'.format(toss_winner))
+            print("* Congragulations {}, you won the toss! *".format(toss_winner))
+            print(' '*k)
+            print(' '*k)
+            print("* Wake up {}, you lost the toss! Doesn't mean you lost the game. Don't lose hope:) *".format(toss_loser))
             print(' '*k)
             return toss_winner
 
@@ -128,6 +132,12 @@ def game_logic():
                 print('     {}, your turn'.format(player1))
                 return player1
 
+        def player_fliper_greetings(player):
+            if player==player1:
+                return player2
+            else:
+                return player1
+
         indices_list = list(range(1,10))
         position=0
         while True:# if win_check() returns True this loop will be broken
@@ -154,7 +164,9 @@ def game_logic():
             if win_check(test_board,marker):
                 print('.'*k)
                 print(' '*k)
-                print('Congragulations {}!. You Won'.format(toss_winner))
+                print('Congragulations {}!. You Won.'.format(toss_winner))
+                print(' '*k)
+                print("{}, Loosing isn't always the end, sometimes it becomes the begining:)  -Joseph Duffy".format(player_fliper_greetings(toss_winner)))
                 print(' '*k)
                 print('.'*k)
                 break
@@ -166,7 +178,7 @@ def game_logic():
         if not win_check(test_board,marker):
             print('.'*k)
             print(' '*k)
-            print('WELL PLAYED! TIE Game')
+            print("*WELL PLAYED! NOBODY LOST:) It's a TIE Game.*")
             print(' '*k)
             print('.'*k)
 
