@@ -27,4 +27,4 @@ If somebody won at any number of iteration then greetings will be displayed on t
 
 The game continues only if you provide the expected input.
   
-The game logic is PERFECT!
+The game logic is PRECISSE, ACCURATE & PERFECT!
